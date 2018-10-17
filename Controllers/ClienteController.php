@@ -13,7 +13,7 @@ public function cadastrarUsuario($nome_cliente, $email_cliente) {
 
         try {
 
-            $objdao = new ClienteDAO();
+            $objdao = new ClienteModel();
 
             $data_cadastro = UtilController::DevolverDataHoraAtual();
 

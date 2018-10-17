@@ -1,3 +1,22 @@
+<?php
+require_once 'Controllers/ClienteController.php';
+
+$nome_usuario = '';
+$email_usuario = '';
+$ret = '';
+
+if(isset($_POST['btn_finalizar'])){
+    $nome_usuario = $_POST['nome_usuario'];
+    $email_usuario = $_POST['email_usuario'];
+
+    $objcontroller = new ClienteController();
+    $ret = $objcontroller->cadastrarUsuario($nome_usuario, $email_usuario);
+//         echo '<pre>';
+//        var_dump($objcontroller);
+//        echo '</pre>';
+    
+}
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -9,15 +28,15 @@
   <div class="container">
     <h3>Dados do Cliente</h3>
     <hr/>
-    <form>
+    <form method="POST" action="?">
       <div class="form-group">
         <label >Nome</label>
-        <input type="text" class="form-control" id="" placeholder="Digite o Nome">
+        <input type="text" class="form-control" id="" name="nome_usuario" placeholder="Digite o Nome">
       </div>
 
       <div class="form-group">
         <label >Email</label>
-        <input type="email" class="form-control" id="" placeholder="Digite o e-mail">
+        <input type="email" class="form-control" id="" name="email_usuario" placeholder="Digite o e-mail">
       </div>
 
       <div class="row">
@@ -52,7 +71,7 @@
           <input type="text" class="form-control" id="" placeholder="Digite a cidade">
         </div>
       </div>
-      <button type="submit" class="btn btn-primary">Cadastrar</button>
+      <button type="submit" class="btn btn-primary" name="btn_finalizar">Cadastrar</button>
 
   
   </form>

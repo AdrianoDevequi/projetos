@@ -2,7 +2,7 @@
 require_once 'Conexao.class.php';
 
 
-class PessoaDAO extends Conexao {
+class ClienteModel extends Conexao {
 
     /** @var PDO */
 
