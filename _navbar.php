@@ -12,7 +12,7 @@
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 					<a class="dropdown-item" href="index.php">Ver Projetos</a>
-					<a class="dropdown-item" href="#">Cadastrar Projetos</a>
+					<a class="dropdown-item" href="cadastrar-projetos.php">Cadastrar Projetos</a>
 				</div>
       		</li>
 
@@ -21,9 +21,20 @@
 				Clientes
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="#">Ver Clientes</a>
+					<a class="dropdown-item" href="listar-clientes.php">Ver Clientes</a>
 					<a class="dropdown-item" href="cadastrar-clientes.php">Cadastrar Clientes</a>
 				</div>
+      		</li>
+
+			<li class="nav-item ">
+				<a class="nav-link" href="listar-pagamentos.php" id="navbarDropdown" role="button" aria-expanded="false">
+				Pagamentos
+				</a>
+      		</li>
+			  <li class="nav-item ">
+				<a class="nav-link" href="cadastrar-pagamentos.php" id="navbarDropdown" role="button" aria-expanded="false">
+				Cadastrar Pagamentos
+				</a>
       		</li>
 			
 			</ul>

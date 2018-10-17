@@ -28,7 +28,6 @@
         <div class="col-md-2 form-group">
           <label >Adicionar</label><br/>
           <button class="btn btn-primary btn-sm"onclick="myFunction()">+ Telefone</button>
-          <button class="btn btn-primary btn-sm"onclick="removeElement()"> Remover</button>
         </div>
       </div>
 
@@ -61,7 +60,7 @@
   <div>
 
   <script type='text/javascript'>
-  /*
+
       function myFunction() {
 
           var inputTelefone = '<div class="row"><div class="col-md-12 form-group"><input type="text" class="form-control" id="" placeholder="Digite o Telefone"></div></div>';
