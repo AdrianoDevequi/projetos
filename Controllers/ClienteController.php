@@ -3,7 +3,7 @@ require_once 'Models/Cliente.php';
 require_once 'UtilController.php';
 
 class ClienteController {
-public function criarConta($nome_cliente, $email_cliente) {
+public function cadastrarUsuario($nome_cliente, $email_cliente) {
 
 
         if (trim($nome_cliente) == "" || trim($email_cliente) == "" ) {
@@ -17,7 +17,7 @@ public function criarConta($nome_cliente, $email_cliente) {
 
             $data_cadastro = UtilController::DevolverDataHoraAtual();
 
-            $id = $objdao->criarConta($nome_cliente, $email_cliente, $data_cadastro);
+            $id = $objdao->cadastrarUsuario($nome_cliente, $email_cliente, $data_cadastro);
 
             return $id;
             
