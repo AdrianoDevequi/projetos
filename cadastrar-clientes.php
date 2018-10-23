@@ -8,9 +8,14 @@ $ret = '';
 if(isset($_POST['btn_finalizar'])){
     $nome_usuario = $_POST['nome_usuario'];
     $email_usuario = $_POST['email_usuario'];
+    $rua = $_POST['rua'];
+    $numero = $_POST['numero'];
+    $cidade = $_POST['cidade'];
 
     $objcontroller = new ClienteController();
+    $objcontroller2 = new ClienteController();
     $ret = $objcontroller->cadastrarUsuario($nome_usuario, $email_usuario);
+    $ret = $objcontroller2->cadastrarEndereco($rua, $numero, $cidade);
 //         echo '<pre>';
 //        var_dump($objcontroller);
 //        echo '</pre>';
@@ -59,16 +64,16 @@ if(isset($_POST['btn_finalizar'])){
         <div class="row">
           <div class="col-md-7 form-group">
           <label >Rua</label>
-          <input type="text" class="form-control" id="" placeholder="Digite o endereço">
+          <input type="text" class="form-control" id="" name="rua" placeholder="Digite o endereço">
         </div>
         <div class="col-md-2 form-group">
           <label >Número</label>
-          <input type="number" class="form-control" id="" placeholder="Ex: 123">
+          <input type="number" class="form-control" id="" name="numero" placeholder="Ex: 123">
           
         </div>
         <div class="col-md-3 form-group">
           <label >Cidade</label>
-          <input type="text" class="form-control" id="" placeholder="Digite a cidade">
+          <input type="text" class="form-control" id="" name="cidade" placeholder="Digite a cidade">
         </div>
       </div>
       <button type="submit" class="btn btn-primary" name="btn_finalizar">Cadastrar</button>

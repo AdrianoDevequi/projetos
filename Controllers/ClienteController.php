@@ -28,4 +28,23 @@ public function cadastrarUsuario($nome_cliente, $email_cliente) {
             return -100;
         }
     }
+
+    public function cadastrarEndereco($rua, $numero, $cidade) {
+
+
+        try {
+
+            $objdao = new ClienteModel();
+
+            $id = $objdao->cadastrarEndereco($rua, $numero, $cidade);
+
+            return $id;
+            
+        } catch (Exception $ex) {
+
+            echo $ex->getMessage();
+
+            return -100;
+        }
+    }
 }
